@@ -7,7 +7,7 @@ from sklearn.preprocessing import LabelEncoder, StandardScaler
 app = Flask(__name__)
 
 # Chemin vers les modèles
-model_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../models"))
+model_path = os.path.join(os.path.dirname(__file__), "models")
 
 # Chargement des modèles
 models = {
@@ -17,7 +17,7 @@ models = {
 }
 
 # Charger le dataset original pour configurer l'encodage
-df = pd.read_csv("C:\\Users\\Aziz\\Downloads\\ObesityDataSet.csv")
+df=pd.read_csv("C:\\Users\\Aziz\\Downloads\\ObesityDataSet.csv")
 
 # Encodage des colonnes catégorielles
 label_encoders = {}
