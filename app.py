@@ -17,7 +17,8 @@ models = {
 }
 
 # Charger le dataset original pour configurer l'encodage
-df=pd.read_csv("C:\\Users\\Aziz\\Downloads\\ObesityDataSet.csv")
+csv_path = os.path.join(os.path.dirname(__file__), "data", "ObesityDataSet.csv")
+df = pd.read_csv(csv_path)
 
 # Encodage des colonnes catégorielles
 label_encoders = {}
